@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserFormComponent implements OnInit {
   name = "";
+  evenStyle={
+    color:'red',
+    fontSize:'40px',
+  }
+  oddStyle={
+    color:'blued',
+    fontSize:'20px',
+  }
 
   constructor() { }
 

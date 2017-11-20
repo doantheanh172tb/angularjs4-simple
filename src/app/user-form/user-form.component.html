@@ -4,3 +4,6 @@
 <h2 [style.color]="name.length %2 ===0 ? 'red' : 'black'">{{name}}</h2>
 
 <div [class]="name.length %2 ===0 ? 'circle' : 'square'"></div>
+
+<h2 [ngStyle]="name.length %2 ===0 ? evenStyle : oddStyle">{{name}}</h2>
+<div [ngClass]="name.length %2 ===0 ? 'circle' : 'square'"></div>
