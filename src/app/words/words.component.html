@@ -1,0 +1,7 @@
+<input type="text" placeholder="VN" [(ngModel)]="newVn">
+<input type="text" placeholder="EN" [(ngModel)]="newEn">
+<button (click)="addWord()"></button>
+<div *ngFor="let word of arrWords">
+  <h4 [ngStyle]="{color: word.memorized ? 'red' : 'green'}">{{word.en}}</h4>--
+  <span>{{word.vn}}</span>
+</div>

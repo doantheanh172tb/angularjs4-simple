@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title';
 import { BookComponent } from './book/book.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { WordsComponent } from './words/words.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { UserFormComponent } from './user-form/user-form.component';
     TitleComponent,
     BookComponent,
     UserFormComponent,
+    WordsComponent,
   ],
   imports: [
     BrowserModule,
