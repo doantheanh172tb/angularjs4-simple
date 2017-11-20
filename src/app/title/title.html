@@ -1,3 +1,5 @@
 <h2 [hidden]="forgot">{{title}}</h2>
 <p>{{desc}}</p>
 <img [src]="imgUrl" alt="">
+<button (click)="forgot=!forgot">Toggle forgot</button>
+<button (click)="toggleForgot()">Toggle forgot (func)</button>

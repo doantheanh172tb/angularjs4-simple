@@ -13,4 +13,7 @@ export class TitleComponent {
     desc = "day la description";
     imgUrl = "https://angular.io/assets/images/logos/angular/shield-large.svg";
     forgot = true;
+    toggleForgot() {
+        this.forgot = !this.forgot;
+    }
 }
