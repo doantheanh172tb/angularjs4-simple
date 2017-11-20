@@ -1,3 +1,6 @@
 <input #txtUsername [(ngModel)]="name" type="text" placeholder="Enter username">
 <h3>Your Name: {{name}} </h3>
 <code>{{txtUsername.value|json}}</code>
+<h2 [style.color]="name.length %2 ===0 ? 'red' : 'black'">{{name}}</h2>
+
+<div [class]="name.length %2 ===0 ? 'circle' : 'square'"></div>
