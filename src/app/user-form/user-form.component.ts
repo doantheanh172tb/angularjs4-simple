@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-form.component.css']
 })
 export class UserFormComponent implements OnInit {
-
+  name = "";
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showEvent(event) {
+    console.log(event.target.value);
+    this.name = event.target.value
   }
 
 }
