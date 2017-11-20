@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./words.component.css']
 })
 export class WordsComponent implements OnInit {
+  isOnAdd = false;
   newVn = "";
   newEn = "";
   arrWords = [
@@ -16,6 +17,9 @@ export class WordsComponent implements OnInit {
     { id: 5, en: 'action 4', vn: 'Hành động 4', memorized: false },
     { id: 6, en: 'action 5', vn: 'Hành động 5', memorized: true }
   ]
+  toggleAddWord() {
+    this.isOnAdd = !this.isOnAdd;
+  }
   constructor() { }
 
   ngOnInit() {
@@ -30,6 +34,6 @@ export class WordsComponent implements OnInit {
     })
     this.newEn = "";
     this.newVn = "";
+    this.isOnAdd = !this.isOnAdd;
   }
-
 }
