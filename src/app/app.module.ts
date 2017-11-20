@@ -5,12 +5,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title';
 import { BookComponent } from './book/book.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
     BookComponent,
+    UserFormComponent,
   ],
   imports: [
     BrowserModule
