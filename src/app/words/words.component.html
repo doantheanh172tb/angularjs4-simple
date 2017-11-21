@@ -10,9 +10,12 @@
   <option value="XEM_DA_QUEN">Xem chua nho</option>
 </select>
 <div *ngFor="let word of arrWords">
-  <div class="item-word" *ngIf="filterWord==='XEM_TAT_CA' || (word.memorized && filterWord==='XEM_DA_NHO') || (!word.memorized && filterWord==='XEM_DA_QUEN')">
+  <div class="item-word" *ngIf="checkShowStatus(word.memorized)">
     <h4 [ngStyle]="{color: word.memorized ? 'green' : 'red'}">{{word.en}}</h4>--
     <span>{{word.vn}}</span>
     <button (click)="removeItemWord(word.id)">Remove</button>
+    <button (click)="word.memorized=!word.memorized">
+      {{word.memorized ? 'Đã quên' : 'Đã thuộc'}}
+    </button>
   </div>
 </div>

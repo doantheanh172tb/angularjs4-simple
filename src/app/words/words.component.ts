@@ -43,4 +43,11 @@ export class WordsComponent implements OnInit {
     const index = this.arrWords.findIndex(word => word.id === id);
     this.arrWords.splice(index, 1);
   }
+
+  checkShowStatus(memorized: boolean) {
+    const dkXemTatCa = this.filterWord === 'XEM_TAT_CA';
+    const dkXemDaNho = this.filterWord === 'XEM_DA_NHO' && memorized;
+    const dkXemDaQuen = this.filterWord === 'XEM_DA_QUEN' && !memorized;
+    return dkXemTatCa || dkXemDaNho || dkXemDaQuen;
+  }
 }
