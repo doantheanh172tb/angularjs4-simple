@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./words.component.css']
 })
 export class WordsComponent implements OnInit {
+  filterWord = "XEM_TAT_CA";
   isOnAdd = false;
   newVn = "";
   newEn = "";
@@ -23,6 +24,7 @@ export class WordsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("WordsComponent::ngOnInit");
   }
 
   addWord() {

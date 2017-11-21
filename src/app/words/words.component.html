@@ -4,9 +4,14 @@
   <button (click)="addWord()">Save</button>
 </div>
 <button (click)="toggleAddWord()" *ngIf="!isOnAdd">Add New</button>
+<select [(ngModel)]="filterWord">
+  <option value="XEM_TAT_CA">Xem tat ca</option>
+  <option value="XEM_DA_NHO">Xem da nho</option>
+  <option value="XEM_DA_QUEN">Xem chua nho</option>
+</select>
 <div *ngFor="let word of arrWords">
-  <div class="item-word">
-    <h4 [ngStyle]="{color: word.memorized ? 'red' : 'green'}">{{word.en}}</h4>--
+  <div class="item-word" *ngIf="filterWord==='XEM_TAT_CA' || (word.memorized && filterWord==='XEM_DA_NHO') || (!word.memorized && filterWord==='XEM_DA_QUEN')">
+    <h4 [ngStyle]="{color: word.memorized ? 'green' : 'red'}">{{word.en}}</h4>--
     <span>{{word.vn}}</span>
     <button (click)="removeItemWord(word.id)">Remove</button>
   </div>
