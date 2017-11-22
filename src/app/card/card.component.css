@@ -1,0 +1,12 @@
+.card{
+    padding: 5px;
+    margin: 5px;
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    width: 300px;
+    -webkit-box-shadow: -5px -5px 5px 0px rgba(204,204,204,1);
+    -moz-box-shadow: -5px -5px 5px 0px rgba(204,204,204,1);
+    box-shadow: -5px -5px 5px 0px rgba(204,204,204,1);
+    background: #f1f1f1;   
+}
