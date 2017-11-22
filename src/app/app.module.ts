@@ -18,7 +18,9 @@ import { Child2Component } from './child2/child2.component';
 import { Parent2Component } from './parent2/parent2.component';
 import { CardComponent } from './card/card.component';
 import { LeanPipeComponent } from './lean-pipe/lean-pipe.component';
-import { RoundPipe } from './CustomPipe/round.pipe'
+import { RoundPipe } from './CustomPipe/round.pipe';
+import { BComponent } from './a/b/b.component';
+import { IpCompComponent } from './components/ip-comp/ip-comp.component'
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { RoundPipe } from './CustomPipe/round.pipe'
     CardComponent,
     LeanPipeComponent,
     RoundPipe,
+    BComponent,
+    IpCompComponent,
   ],
   imports: [
     BrowserModule,
