@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child1',
@@ -6,13 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child1.component.css']
 })
 export class Child1Component implements OnInit {
-  text: String;
+
+  @Output() parentClickEvent = new EventEmitter<boolean>();
+
   childClick(isAdd) {
-    if (isAdd) {
-      this.text = "sssss";
-    } else {
-      this.text = "aaaaa";
-    }
+    this.parentClickEvent.emit(isAdd);
   }
 
   constructor() { }
