@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
 import { HttpModule } from '@angular/http'
 
+import { IpService } from './services/ip.service'
+
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title';
 import { BookComponent } from './book/book.component';
@@ -47,7 +49,7 @@ import { IpCompComponent } from './components/ip-comp/ip-comp.component'
     FormsModule,
     HttpModule,
   ],
-  providers: [],
+  providers: [IpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
