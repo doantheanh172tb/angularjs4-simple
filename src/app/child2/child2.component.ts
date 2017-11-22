@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Child2Component implements OnInit {
 
+  childValue: number = 0;
+
   constructor() { }
 
   ngOnInit() {
