@@ -1,2 +1,2 @@
-<button>Add for child</button>
-<app-child2></app-child2>
+<app-child2 #child></app-child2>
+<button (click)="child.childValue = child.childValue + 1">Add for child</button>
