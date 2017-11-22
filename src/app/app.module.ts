@@ -10,6 +10,8 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { WordsComponent } from './words/words.component';
 import { ListPersonComponent } from './list-person/list-person.component';
 import { PersonComponent } from './person/person.component';
+import { ParentCompComponent } from './parent-comp/parent-comp.component';
+import { ChildCompComponent } from './child-comp/child-comp.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { PersonComponent } from './person/person.component';
     WordsComponent,
     ListPersonComponent,
     PersonComponent,
+    ParentCompComponent,
+    ChildCompComponent,
   ],
   imports: [
     BrowserModule,
