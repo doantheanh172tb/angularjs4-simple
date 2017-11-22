@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { FormsModule } from '@angular/forms'
+import { HttpModule } from '@angular/http'
 
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title';
@@ -19,7 +20,6 @@ import { Parent2Component } from './parent2/parent2.component';
 import { CardComponent } from './card/card.component';
 import { LeanPipeComponent } from './lean-pipe/lean-pipe.component';
 import { RoundPipe } from './CustomPipe/round.pipe';
-import { BComponent } from './a/b/b.component';
 import { IpCompComponent } from './components/ip-comp/ip-comp.component'
 
 @NgModule({
@@ -40,12 +40,12 @@ import { IpCompComponent } from './components/ip-comp/ip-comp.component'
     CardComponent,
     LeanPipeComponent,
     RoundPipe,
-    BComponent,
     IpCompComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
