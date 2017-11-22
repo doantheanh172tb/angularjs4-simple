@@ -5,14 +5,15 @@ import { IpService } from './../../services/ip.service'
   selector: 'app-ip-comp',
   templateUrl: './ip-comp.component.html',
   styleUrls: ['./ip-comp.component.css'],
-  providers: [IpService]
 })
-export class IpCompComponent {
+export class IpCompComponent implements OnInit {
   ip: String;
-  constructor(private ipService: IpService) {
+
+  constructor(private ipService: IpService) { }
+
+  ngOnInit(): void {
     this.ipService.getIp()
       .then(ip => this.ip = ip)
       .catch(err => console.log(err));
   }
-
 }
