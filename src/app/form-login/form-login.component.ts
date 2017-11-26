@@ -7,10 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormLoginComponent implements OnInit {
 
-  email = "";
-  password = "";
   onSubmit(formSignIn) {
-    console.log(formSignIn.value);
+    console.log(formSignIn);
   }
 
   constructor() { }
