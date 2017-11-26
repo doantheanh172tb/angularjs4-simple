@@ -27,7 +27,13 @@ import { WeatherComponent } from './components/weather/weather.component';
 import { FormLoginComponent } from './form-login/form-login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { ContactDetailComponent } from './contact-detail/contact-detail.component'
+import { ContactDetailComponent } from './contact-detail/contact-detail.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const routesConfig: Routes = [
+  { path: 'contact-detail', component: ContactDetailComponent },
+  { path: 'contacts', component: ContactsComponent }
+];
 
 @NgModule({
   declarations: [
@@ -59,6 +65,7 @@ import { ContactDetailComponent } from './contact-detail/contact-detail.componen
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    RouterModule.forRoot(routesConfig),
   ],
   providers: [
     IpService,
