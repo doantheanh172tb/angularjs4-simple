@@ -32,7 +32,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routesConfig: Routes = [
   { path: 'contact-detail', component: ContactDetailComponent },
-  { path: 'contacts', component: ContactsComponent }
+  { path: 'contacts', component: ContactsComponent },
+  { path: '', redirectTo: 'contacts', pathMatch: 'full' },
 ];
 
 @NgModule({
