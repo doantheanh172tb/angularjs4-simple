@@ -14,8 +14,10 @@
     Email is not valid
   </p>
   <br>
+  <label><input [ngModel]=false type="checkbox" name="checkbox">Football</label>
   <input type="password" placeholder="Password" ngModel name="passwod" required>
   <button [disabled]="formSignIn.invalid">Submit</button>
 </form>
 
 <p>{{txtEmail?.errors|json}}</p>
+<p>{{formSignIn.value|json}}</p>
