@@ -17,12 +17,12 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit() {
     this.formSignUp = new FormGroup({
-      email: new FormControl,
+      email: new FormControl('doantheanh172tb@gmail.com'),
       password: new FormControl,
       subject: new FormGroup({
-        nodejs: new FormControl(),
-        reactjs: new FormControl(),
-        angular: new FormControl(),
+        nodejs: new FormControl(true),
+        reactjs: new FormControl(false),
+        angular: new FormControl(false),
       })
     })
   }
