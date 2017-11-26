@@ -29,11 +29,13 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 import { Routes, RouterModule } from '@angular/router';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routesConfig: Routes = [
   { path: 'contact-detail', component: ContactDetailComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: '', redirectTo: 'contacts', pathMatch: 'full' },
+  { path: '**', component: PagenotfoundComponent },
 ];
 
 @NgModule({
@@ -60,6 +62,7 @@ const routesConfig: Routes = [
     SignUpComponent,
     ContactsComponent,
     ContactDetailComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,
