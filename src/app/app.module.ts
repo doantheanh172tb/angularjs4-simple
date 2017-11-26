@@ -24,7 +24,8 @@ import { LeanPipeComponent } from './lean-pipe/lean-pipe.component';
 import { RoundPipe } from './CustomPipe/round.pipe';
 import { IpCompComponent } from './components/ip-comp/ip-comp.component';
 import { WeatherComponent } from './components/weather/weather.component';
-import { FormLoginComponent } from './form-login/form-login.component'
+import { FormLoginComponent } from './form-login/form-login.component';
+import { SignUpComponent } from './sign-up/sign-up.component'
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { FormLoginComponent } from './form-login/form-login.component'
     IpCompComponent,
     WeatherComponent,
     FormLoginComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,

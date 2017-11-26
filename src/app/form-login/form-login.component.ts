@@ -14,7 +14,7 @@ export class FormLoginComponent implements OnInit {
   onSubmit(formSignIn) {
     this.signInService.signIn(formSignIn.value)
       .then(result => console.log(result))
-      .catch(err => console.log(err))
+      .catch(err => console.log(err));
   }
 
   ngOnInit() {
