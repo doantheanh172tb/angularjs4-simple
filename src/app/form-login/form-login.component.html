@@ -14,8 +14,14 @@
     Email is not valid
   </p>
   <br>
-  <label><input [ngModel]=false type="checkbox" name="checkbox">Football</label>
   <input type="password" placeholder="Password" ngModel name="passwod" required>
+  <br>
+  <div ngModelGroup="subjects">
+    <label><input [ngModel]=false type="checkbox" name="nodejs">nodejs</label>
+    <label><input [ngModel]=false type="checkbox" name="reactjs">reactjs</label>
+    <label><input [ngModel]=false type="checkbox" name="angular">angular</label>
+  </div>
+  <br>
   <button [disabled]="formSignIn.invalid">Submit</button>
 </form>
 
