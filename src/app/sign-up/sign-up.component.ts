@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms'
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-sign-up',
@@ -15,12 +15,12 @@ export class SignUpComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.formSignUp.value);
+    console.log(this.formSignUp);
   }
 
   ngOnInit() {
     this.formSignUp = this.fb.group({
-      email: 'doantheanh172tb@gmail.com',
+      email: ['', Validators.required],
       password: '',
       subject: this.fb.group({
         nodejs: true,

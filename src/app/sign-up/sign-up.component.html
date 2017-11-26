@@ -4,6 +4,7 @@
     placeholder="Email"
     formControlName="email"
   >
+  <p *ngIf="formSignUp.get('email').invalid && formSignUp.get('password').touched">Email is required</p>
   <br>
   <input 
     type="password" 
@@ -16,5 +17,5 @@
     <label><input formControlName="reactjs" type="checkbox" name="reactjs">reactjs</label>
     <label><input formControlName="angular" type="checkbox" name="angular">angular</label>
   </div>
-  <button>Submit</button>
+  <button [disabled]="formSignUp.invalid">Submit</button>
 </form>
