@@ -20,7 +20,7 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit() {
     this.formSignUp = this.fb.group({
-      email: ['', Validators.required],
+      email: ['', [Validators.required, gmailValidator]],
       password: '',
       subject: this.fb.group({
         nodejs: true,
@@ -29,5 +29,12 @@ export class SignUpComponent implements OnInit {
       })
     })
   }
+}
 
+function gmailValidator(formControl: FormControl) {
+  console.log('gmailValidator');
+  if (formControl.value.includes('@gmail.com')) {
+    return null;
+  }
+  return { gmail: true };
 }
