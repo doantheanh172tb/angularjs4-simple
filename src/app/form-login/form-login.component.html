@@ -1,9 +1,16 @@
 <form (ngSubmit)="onSubmit(formSignIn);" #formSignIn="ngForm">
-  <input placeholder="Email" ngModel #txtEmail="ngModel" name="email" email required>
-  <p *ngIf="txtEmail?.errors?.required">
+  <input 
+    placeholder="Email"
+    ngModel
+    #txtEmail="ngModel"
+    name="email"
+    required
+    email
+  >
+  <p *ngIf="txtEmail.touched && txtEmail?.errors?.required">
     Email is required
   </p>
-  <p *ngIf="txtEmail?.errors?.email">
+  <p *ngIf="txtEmail.touched && txtEmail?.errors?.email">
     Email is not valid
   </p>
   <br>
