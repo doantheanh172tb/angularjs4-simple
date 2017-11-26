@@ -14,7 +14,16 @@
     Email is not valid
   </p>
   <br>
-  <input type="password" placeholder="Password" ngModel name="passwod" required>
+  <input 
+    type="password" 
+    placeholder="Password" 
+    ngModel 
+    #txtPassword="ngModel"
+    name="passwod" 
+    required
+    minlength="6"
+    pattern="[a-z]*"
+  >
   <br>
   <div ngModelGroup="subjects">
     <label><input [ngModel]=false type="checkbox" name="nodejs">nodejs</label>
@@ -26,4 +35,5 @@
 </form>
 
 <p>{{txtEmail?.errors|json}}</p>
+<p>{{txtPassword?.errors|json}}</p>
 <p>{{formSignIn.value|json}}</p>
