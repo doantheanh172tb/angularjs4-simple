@@ -19,6 +19,11 @@ export class SignUpComponent implements OnInit {
     this.formSignUp = new FormGroup({
       email: new FormControl,
       password: new FormControl,
+      subject: new FormGroup({
+        nodejs: new FormControl(),
+        reactjs: new FormControl(),
+        angular: new FormControl(),
+      })
     })
   }
 
