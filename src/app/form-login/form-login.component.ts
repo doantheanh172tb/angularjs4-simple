@@ -1,41 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Headers } from '@angular/http';
-import 'rxjs/add/operator/toPromise';
+import { SignInService } from '../services/signIn.service'
 
 @Component({
   selector: 'app-form-login',
   templateUrl: './form-login.component.html',
-  styleUrls: ['./form-login.component.css']
+  styleUrls: ['./form-login.component.css'],
+  providers: [SignInService]
 })
 export class FormLoginComponent implements OnInit {
 
+  constructor(private signInService: SignInService) { }
+
   onSubmit(formSignIn) {
-    const url = "http://localhost:3000/signin";
-    const headers = new Headers({
-      'Content-Type': 'application/json'
-    })
-    const body = JSON.stringify(formSignIn.value);
-    this.http.post(url, body, { headers })
-      .toPromise()
-      .then(res => res.json())
-      .then(resJson => console.log(resJson))
-      .catch(err => console.log(err));
+    this.signInService.signIn(formSignIn.value)
+      .then(result => console.log(result))
+      .catch(err => console.log(err))
   }
 
-  constructor(private http: Http) { }
-
-  postToExpress() {
-    const url = "http://localhost:3000/signin";
-    const headers = new Headers({
-      'Content-Type': 'application/json'
-    })
-    const body = JSON.stringify({ name: 'the anh' });
-    this.http.post(url, body, { headers })
-      .toPromise()
-      .then(res => res.json())
-      .then(resJson => console.log(resJson))
-      .catch(err => console.log(err));
-  }
   ngOnInit() {
   }
 
