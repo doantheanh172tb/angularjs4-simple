@@ -1,28 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms'
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms'
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.css']
+  styleUrls: ['./sign-up.component.css'],
+  providers: [FormBuilder]
 })
 export class SignUpComponent implements OnInit {
 
   formSignUp: FormGroup;
-  constructor() { }
+
+  constructor(private fb: FormBuilder) {
+  }
 
   onSubmit() {
     console.log(this.formSignUp.value);
   }
 
   ngOnInit() {
-    this.formSignUp = new FormGroup({
-      email: new FormControl('doantheanh172tb@gmail.com'),
-      password: new FormControl,
-      subject: new FormGroup({
-        nodejs: new FormControl(true),
-        reactjs: new FormControl(false),
-        angular: new FormControl(false),
+    this.formSignUp = this.fb.group({
+      email: 'doantheanh172tb@gmail.com',
+      password: '',
+      subject: this.fb.group({
+        nodejs: true,
+        reactjs: true,
+        angular: false,
       })
     })
   }
